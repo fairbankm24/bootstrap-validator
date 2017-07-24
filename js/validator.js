@@ -217,7 +217,7 @@
         data[$el.attr('name')] = getValue($el)
         $.get($el.attr('data-remote'), data)
           .fail(function (jqXHR, textStatus, error) {
-            let errorMsg = (jqXHR.responseJSON ?
+            var errorMsg = (jqXHR.responseJSON ?
               (jqXHR.responseJSON.message ?
                 jqXHR.responseJSON.message : error) : error);
             $el.attr({
